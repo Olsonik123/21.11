@@ -1,0 +1,56 @@
+   internal class Program
+    {
+        class Komputer
+        {
+            private int wysokosc;
+            private int szeeokosc;
+            private string produkt;
+
+            public void dajOpis()
+            {
+                Console.WriteLine("super komp");
+            }
+
+            public static void Wlacz()
+            {
+                Console.WriteLine("bruuuuuum");
+            }
+        }
+        class Utilsy
+        {
+            public static string LOGIN = "root";
+            public static string PASSWORD = "abdul123";
+            public static double PI = 3.1415;
+            public static int MojaSuma(int a, int b)
+            {
+                int suma = a;
+                for (int i = 0; i < b; i++)
+
+                {
+                    suma += 1;
+                }
+                return suma;
+            }
+
+        }
+
+        static void Main(string[] args)
+        {
+            Komputer komp1 = new Komputer();
+            komp1.dajOpis();
+            Komputer.Wlacz();
+            Console.ReadKey();
+            string login = Console.ReadLine();
+            string PASSWORD = Console.ReadLine();
+            if (login == Utilsy.LOGIN && PASSWORD == Utilsy.PASSWORD)
+            {
+                Console.WriteLine("zalogowałeś się");
+            }
+            else
+            {
+                Console.WriteLine("nie udana próba zalogowania");
+            }
+
+        }
+    }
+}
